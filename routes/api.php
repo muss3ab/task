@@ -6,16 +6,15 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StatsController;
 use App\Http\Controllers\TagController;
-
-
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
 // })->middleware('auth:sanctum');
-
-
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/verify', [AuthController::class, 'verify']);
+Route::get('test', function () {
+    return 'Hello World';
+});
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+Route::post('verify', [AuthController::class, 'verify']);
 
 
 Route::middleware('auth:sanctum')->group(function () {

@@ -64,7 +64,7 @@ touch database/database.sqlite
 DB_CONNECTION=sqlite
 ```
 
-6. Generate application key
+6. Generate application key ifn
 ```bash
 php artisan key:generate
 ```
@@ -78,10 +78,21 @@ php artisan migrate
 ```bash
 php artisan storage:link
 ```
+9. run app 
+```bash
+php artisan serve
+```
+10. run schedule 
+```bash 
+php artisan schedule:work
+php artisan queue:work
+```
 
 ## API Endpoints
 
 ### Authentication
+header api
+Authorization: Bearer 2|KxEiB78wxK81Q8ZCTURAfFHQfYJHGHMsTmpEiiYF853f0867
 
 ```
 POST /api/register
@@ -192,6 +203,7 @@ The application includes two scheduled tasks:
 To run the scheduler:
 ```bash
 php artisan schedule:work
+php artisan queue:work
 ```
 
 ## Cache
